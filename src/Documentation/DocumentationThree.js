@@ -18,7 +18,13 @@ const DocumentationThree = () => {
       <br />
       {errors.firstName && <p> {errors.firstName.message} </p>}
       <br />
-      lastName : <input type="text" name="lastName" ref={register({ required : true })} /> <br />
+      lastName :{" "}
+      <input
+        type="text"
+        name="lastName"
+        ref={register({ required: true })}
+      />{" "}
+      <br />
       <br />
       Age :{" "}
       <input
@@ -30,8 +36,29 @@ const DocumentationThree = () => {
           max: { value: 99, message: "age should be under 100" },
         })}
       />{" "}
-      { errors.age && <p> { errors.age.message} </p>}
+      {errors.age && <p> {errors.age.message} </p>}
       <br /> <br />
+      <input
+        type="password"
+        name="password"
+        ref={register({ required: "field is empty" , validate : 
+
+            (value) => {
+
+                return (
+
+                    [/[a-z]/,/[A-Z]/,/[0-9]/,/[^a-zA-Z0-9]/].every((pattern) => 
+
+             pattern.test(value)) || "pass must contain upper lower and special chars"
+ 
+                )
+            }
+        
+      
+      
+      })}
+      />
+      {errors.password && <p> {errors.password.message} </p>}
       <input type="submit" value="submit" />
     </form>
   );
