@@ -1,5 +1,7 @@
 import './App.css';
-import DocumentationThree from './Documentation/DocumentationThree';
+import ValidationWithYup from './Documentation/ValidationWithYup/ValidationWithYup';
+// import DocumentationFour from './Documentation/DocumentationFour';
+// import DocumentationThree from './Documentation/DocumentationThree';
 // import DocumentationTwo from './Documentation/DocumentationTwo';
 // import DocumentationOne from './Documentation/DocumentationOne.js';
 // import TutorialOne from './Tutorials/Tutorial-One/TutorialOne'
@@ -17,7 +19,9 @@ function App() {
 
             {/* <DocumentationOne/> */}
             {/* <DocumentationTwo/> */}
-            <DocumentationThree/>
+            {/* <DocumentationThree/> */}
+            {/* <DocumentationFour/> */}
+            <ValidationWithYup/>
     </div>
   );
 }
